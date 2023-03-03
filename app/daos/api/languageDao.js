@@ -1,7 +1,7 @@
 const connection = require('../../config/dbconfig');
 
 const languageDao = {
-    table: 'language_id',
+    table: 'language',
 
     // Create Method
     // ----------------------------------------------------------------
