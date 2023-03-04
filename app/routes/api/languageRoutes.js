@@ -27,7 +27,7 @@ router.get('/api/:id', (req, res)=>{
 });
 
 // Views
-router.get('/', (req, res)=> {
+router.get('/language', (req, res)=> {
     const url = `http://localhost:${PORT}/language/api`
 
     const fetch = (...args) => import('node-fetch').then(({defualt: fetch})=> fetch(...args))

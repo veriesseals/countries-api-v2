@@ -37,6 +37,31 @@ router.get('/api', (req, res)=> {
     })
 })
 
+// localhost:3000/api/country
+// ------------------------------------------
+router.use('/country', require('./api/countryRoutes'));
+
+// Home Page
+// ------------------------------------------
+router.get('/', (req, res)=>{
+    res.render('pages/home', {
+        title: 'Home',
+        name: 'Veries\'s Country Database'
+    })
+})
+
+// Error Page
+// ------------------------------------------
+router.get('*', (req, res)=>{
+    if(req.url === '/favicon.ico/') {
+        res.end()
+    } else {
+        res.render('pages/404',{
+            title: '404 Error',
+            name: '404 Error'
+        })
+    }
+})
 
 // Export router
 module.exports = router;
