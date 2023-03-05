@@ -1,0 +1,23 @@
+<%- include('../partials/header') %>
+
+<main class="main main-single-country">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <img src="https://via.placeholder.com/450x450" alt="<%= data.title %>" class="img-fluid single-country-img" />
+            </div>
+            <div class="col-md-4">
+                <ul class="list-group">
+                    <li class="list-group-item"><%= data.title %></li>
+                    <li class="list-group-item"><%= data.capital %></li>
+                    <li class="list-group-item"><%= data.population %></li>
+                    <li class="list-group-item"><%= data.bird %></li>
+                    <li class="list-group-item"><%= data.food %></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<%- include('../partials/footer') %>

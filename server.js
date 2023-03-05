@@ -19,7 +19,6 @@ const router = require('./app/routes/router');
 server.use('/', router);
 
 
-
 // Create PORT Listener
 // ----------------------------------------------------
 server.listen(PORT, ()=> console.log(`PORT ${PORT} is working and we in there!`))

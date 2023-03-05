@@ -9,12 +9,18 @@
     <title><%= title %></title>
 </head>
 <body>
-    <header class="header">
-        <container class="container">
-            <div class="col-md-6">
-                <div class="row">
-                    <h1>Test</h1>
-                </div>
+    <header class="header header">
+        <div class="container">
+            <div class="row">
+                <h1 class="header-h1"><%= name %></h1>
             </div>
-        </container>
+            <div class="row">
+                <nav class="nav justify-content-around">
+                    <a href="/" class="nav-link">home</a>
+                    <a href="/country" class="nav-link">country</a>
+                    <a href="/continent" class="nav-link">continent</a>
+                    <a href="/language" class="nav-link">language</a>
+                </nav>
+            </div>
+        </div>
     </header>

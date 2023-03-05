@@ -1,0 +1,22 @@
+<%- include('../partials/header'); %>
+
+<main class="main main-continent">
+    <div class="container">
+        <h2 class="header-h2"><%= name %></h2>
+        <div class="row">
+            <% data.forEach(item => { %>
+                <div class="col-md-3">
+                    <figure class="figure figure-continent">
+                        <img src="https://via.placeholder.com/150x150" alt="<%= item.title %>" class="img-fluid continent-img" />
+                        <figcaption>
+                            <p>Continent:</p> <%= item.continent_id %>. <%= item.continent %>
+                        </figcaption>
+
+                    </figure>
+                </div>
+
+            <% }) %>
+        </div>
+    </div>
+</main>
+<%- include('../partials/footer'); %>
