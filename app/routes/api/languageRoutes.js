@@ -4,8 +4,25 @@ const express = require('express');
 const router = express.Router();
 const PORT = process.env.PORT || 3000;
 
-
+// Destructure continentDao
+// -----------------------------------------------------
 const {languageDao: dao} = require('../../daos/dao');
+
+router.get('/', (req, res)=>{
+    const url = `http://localhost:${PORT}/language/api`
+
+    const fetch = (...args)=> import('node-fetch').then(({default: fetch})=> fetch(...args))
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            res.render('pages/language', {
+                title: 'All Languages',
+                name: 'All Languages',
+                data
+            })
+        })
+})
 
 // localhost:3000/language/api
 // -----------------------------------------------------

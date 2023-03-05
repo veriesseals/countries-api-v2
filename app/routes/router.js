@@ -6,6 +6,7 @@ const PORT = process.env.PORT|| 3000;
 // Serve static resources like images, css, JavaScript. Using express.static() method, you can server static resources directly by specifying the folder name where you have stored your static resources.
 router.use(express.static('public'));
 
+
 // countryRoutes
 // --------------------------------------------------------
 const countryRoutes = require('./api/countryRoutes')
@@ -46,7 +47,7 @@ router.use('/country', require('./api/countryRoutes'));
 router.get('/', (req, res)=>{
     res.render('pages/home', {
         title: 'Home',
-        name: 'Veries\'s Country Database'
+        name: 'Veries\'s Country Database Home Page'
     })
 })
 
